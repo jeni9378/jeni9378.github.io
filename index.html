@@ -1,34 +1,176 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Vip Beleza Profissional | Cabelo, Unha, Cílios</title>
     <style>
-        section{
-            width:100%;
-            height:100%;
-            background-color:lightblue;
+        /* CSS Estilizado */
+        :root {
+            --cor-principal: #d4a373; /* Dourado suave */
+            --cor-fundo: #faf3e0;
+            --cor-texto: #333;
+            --cor-preto: #000;
+            --cor-branco: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-preto);
+            color: var(--cor-branco);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 { margin: 0; font-size: 2em; }
+        header p { margin: 5px 0 0; color: var(--cor-principal); }
+
+        /* Banner */
+        .banner {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        /* Tabela de Preços */
+        .servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .servico-card {
+            background: var(--cor-branco);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--cor-principal);
+        }
+
+        .servico-card h3 {
+            color: var(--cor-principal);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .item {
             display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 1.1em;
         }
-        #primeiro{
-            width:20%;
-            height:100%;
-            background-color:red;
+
+        .preco {
+            font-weight: bold;
+            color: var(--cor-preto);
         }
-         #segundo{
-            width:60%;
-            height:100%;
-            background-color:blue;
+
+        /* Botão WhatsApp */
+        .btn-whats {
+            display: block;
+            width: 250px;
+            margin: 40px auto;
+            text-align: center;
+            background-color: #25d366;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: 0.3s;
         }
-         #terceiro{
-            width:20%;
-            height:100%;
-            background-color:black;
+
+        .btn-whats:hover { background-color: #128c7e; }
+
+        footer {
+            background-color: var(--cor-preto);
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .servicos { grid-template-columns: 1fr; }
         }
     </style>
-    <body>
-    <header></header>
-    <Section>
-        <div id="primeiro"></div>
-        <div id="segundo"></div>
-        <div id="terceiro"></div>
-    </Section>
-    <footer></footer>
-    </body>
+</head>
+<body>
+
+<header>
+    <h1>Espaço Vip Beleza</h1>
+    <p>Sua autoestima renovada</p>
+</header>
+
+<div class="banner">
+    <h2>Especialistas em Cabelo, Unhas e Estética</h2>
+    <p>Agende sua transformação hoje mesmo.</p>
+</div>
+
+<div class="container">
+    <h2 style="text-align: center;">Nossos Serviços</h2>
+    
+    <div class="servicos">
+        <!-- Cabelo -->
+        <div class="servico-card">
+            <h3>💇‍♀️ Cabelo</h3>
+            <div class="item"><span>Escova Simples</span> <span class="preco">R$ 50-80</span></div>
+            <div class="item"><span>Progressiva</span> <span class="preco">R$ 150-300</span></div>
+            <div class="item"><span>Luzes/Descoloração</span> <span class="preco">R$ 250+</span></div>
+            <div class="item"><span>Hidratação Profunda</span> <span class="preco">R$ 70-110</span></div>
+        </div>
+
+        <!-- Unhas -->
+        <div class="servico-card">
+            <h3>💅 Unha</h3>
+            <div class="item"><span>Manicure</span> <span class="preco">R$ 40</span></div>
+            <div class="item"><span>Pedicure</span> <span class="preco">R$ 50</span></div>
+            <div class="item"><span>Alongamento (Gel)</span> <span class="preco">R$ 150</span></div>
+            <div class="item"><span>Manutenção Gel</span> <span class="preco">R$ 90</span></div>
+        </div>
+
+        <!-- Estética -->
+        <div class="servico-card">
+            <h3>👁️ Estética/Olhar</h3>
+            <div class="item"><span>Sobrancelha (Design)</span> <span class="preco">R$ 35</span></div>
+            <div class="item"><span>Henna</span> <span class="preco">R$ 50</span></div>
+            <div class="item"><span>Cílios (Volume Russo)</span> <span class="preco">R$ 120-200</span></div>
+            <div class="item"><span>Lifting de Cílios</span> <span class="preco">R$ 100</span></div>
+        </div>
+    </div>
+
+    <!-- Link do WhatsApp: Trocar o número 55... pela do salão -->
+    <a href="https://wa.me, gostaria de agendar um horário." class="btn-whats" target="_blank">
+        Agendar pelo WhatsApp
+    </a>
+</div>
+
+<footer>
+    <p>Espaço Vip Beleza &copy; 2026 - R. Principal, 123 - Cidade/UF</p>
+</footer>
+
+</body>
 </html>
+
